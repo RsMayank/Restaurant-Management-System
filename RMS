@@ -1,0 +1,260 @@
+import java.util.*;
+import java.io.*;
+public class RMS
+{
+    public static void main(String [] args)
+    {
+        Customer c=new Customer();
+        c.choice();
+        Customer s=new Abc();
+        s.choice();
+    }
+}
+class Customer
+{
+    int veg,non_veg,a;
+    void choice()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome To FightClub Restaurent:-");
+        System.out.println("Please enter your choice:-");
+        System.out.println("For veg enter 0:-");
+        System.out.println("For non-veg enter 1:-");
+        a=sc.nextInt();
+    }
+}
+class Abc extends Customer
+{
+    int ch;
+    int mealcost;
+    double tax,totalcost,tip,totalbill;
+    Scanner sc=new Scanner(System.in);
+    void choice()
+    {
+        if(a==0)
+        {
+            System.out.println("****************************VEG MENU*********************************");
+            System.out.println("");
+            System.out.println("1---   Chilli Paneer");
+            System.out.println("2---   Paneer Manchurian with Gravy");
+            System.out.println("3---   FightClub Secial Potato with gravy");
+            System.out.println("4---   Palak Paneer");
+            System.out.println("5---   Extra spicy Chole");
+            System.out.println("6---   Mix Veg Combo");
+            System.out.println("7---   Daal-Palak Ka Shorba Soup");
+            System.out.println("8---   Special Fried Pulses");
+            Scanner q=new Scanner(System.in);
+            System.out.println("");
+            System.out.println("Enter the no. of your choice :");
+            ch=q.nextInt();
+
+            switch(ch)
+            {
+                case 1:
+                System.out.println("Price of Chilli Paneer: 320");
+                System.out.println("Enter the number of Chapatis");
+                int ab=sc.nextInt();
+                System.out.println("Enter number of plates of rice:");
+                int bb=sc.nextInt();
+                mealcost=320+(10*ab)+(50*bb);
+                break;
+                
+                case 2:
+                System.out.println("Price of Paneer Manchurian with Gravy: 390");
+                System.out.println("Enter the number of Chapatis");
+                int ac=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bc=sc.nextInt();
+                mealcost=390+(10*ac)+(50*bc);
+                break;
+                
+                case 3:
+                System.out.println("Price of FightClub Secial Potato with gravy: 250");
+                System.out.println("Enter the number of Chapatis");
+                int ad=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bd=sc.nextInt();
+                mealcost=250+(10*ad)+(50*bd);
+                break;
+                
+                case 4:
+                System.out.println("Price of Palak Paneer: 380");
+                System.out.println("Enter the number of Chapatis");
+                int ae=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int be=sc.nextInt();
+                mealcost=380+(10*ae)+(50*be);
+                break;
+                
+                case 5:
+                System.out.println("Price of Extra spicy Chole: 300");
+                System.out.println("Enter the number of Bhature");
+                int ag=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bf=sc.nextInt();
+                mealcost=300+(10*ag)+(50*bf);
+                break;
+                
+                case 6:
+                System.out.println("Price of Mix Veg Combo: 200");
+                System.out.println("Enter the number of Chapatis");
+                int ah=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bg=sc.nextInt();
+                mealcost=200+(10*ah)+(50*bg);
+                break;
+                
+                case 7:
+                System.out.println("Price of Daal-Palak Ka Shorba Soup: 360");
+                System.out.println("Enter the number of Chapatis");
+                int ai=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bh=sc.nextInt();
+                mealcost=360+(10*ai)+(50*bh);
+                break;
+                
+                case 8:
+                System.out.println("Price of Special Fried Pulses: 360");
+                System.out.println("Enter the number of Chapatis");
+                int az=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bi=sc.nextInt();
+                mealcost=360+(10*az)+(50*bi);
+                break;
+                
+                default:
+                System.out.print("Please Enter valid choice.");
+            }
+        }
+        else if(a==1)
+        {
+            System.out.println("*********************************NON veg.****************************** ");
+            System.out.println("1--  Grilled Chicken Escalope with Fresh Salsa     ");
+            System.out.println("2--  Fish Molee     ");
+            System.out.println("3--  Chicken Chettinad      ");
+            System.out.println("4--  Kerala Karimeen Fry     ");
+            System.out.println("5--  Prawns Kuzhambu      ");
+            System.out.println("6--  Kheema with Coconut Curry      ");
+            System.out.println("7--  Payyoli Chicken Fry      ");
+            System.out.println("8--  Biryani     ");
+            System.out.println("9--  Butter chicken     ");
+            System.out.println("10-- Chicken Tikka masala ");
+            System.out.println("11-- Chicken 65 ");
+            Scanner q=new Scanner(System.in);
+            System.out.println("");
+            System.out.println("Enter your choice :");
+            ch=q.nextInt();
+
+            switch(ch)
+            {
+                case 1:
+                System.out.println("Price of Grilled Chicken Escalope with Fresh Salsa is: 500");
+                System.out.println("Enter the number of Chapatis");
+                int aj=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bj=sc.nextInt();
+                mealcost=500+(10*aj)+(50*bj);
+                break;
+                
+                case 2:
+                System.out.println("price of Fish Molee is: 320");
+                System.out.println("Enter the number of Chapatis");
+                int al=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bk=sc.nextInt();
+                mealcost=320+(10*al)+(50*bk);
+                break;
+                
+                case 3:
+                System.out.println("Price of Chicken Chettinad of: 460");
+                System.out.println("Enter the number of Chapatis");
+                int am=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bl=sc.nextInt();
+                mealcost=460+(10*am)+(50*bl);
+                break;
+                
+                case 4:
+                System.out.println("Price of Kerala Karimeen Fry of: 400");     
+                System.out.println("Enter the number of Chapatis");
+                int an=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bm=sc.nextInt();
+                mealcost=400+(10*an)+(50*bm);
+                break;
+                
+                case 5:
+                System.out.println("Price of Prawns Kuzhambu is: 450");
+                System.out.println("Enter the number of Chapatis");
+                int ao=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bn=sc.nextInt();
+                mealcost=450+(10*ao)+(50*bn);
+                break;
+                
+                case 6:
+                System.out.println("Price of Kheema with Coconut Curry is: 400");
+                System.out.println("Enter the number of Chapatis");
+                int ap=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bo=sc.nextInt();
+                mealcost=400+(10*ap)+(50*bo);
+                break;
+                
+                case 7:
+                System.out.println("Price of Payyoli Chicken Fry is: 380");
+                System.out.println("Enter the number of Chapatis");
+                int aq=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bp=sc.nextInt();
+                mealcost=380+(10*aq)+(50*bp);
+                break;
+                
+                case 8:
+                System.out.println("Price of Biryani is : 450");
+                mealcost=450;
+                break;
+                
+                case 9:
+                System.out.println("Price of Butter chicken is: 490");   
+                System.out.println("Enter the number of Chapatis");
+                int as=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bq=sc.nextInt();
+                mealcost=490+(10*as)+(50*bq);
+                break;
+                
+                case 10:
+                System.out.println("Price of  Chicken Tikka masala is: 480");
+                System.out.println("Enter the number of Chapatis");
+                int at=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int br=sc.nextInt();
+                mealcost=480+(10*at)+(50*br);
+                break;
+                
+                case 11:
+                System.out.println("Price of Chicken 65 is: 470"); 
+                System.out.println("Enter the number of Chapatis");
+                int au=sc.nextInt();
+                System.out.println("Enter number of plates of rice");
+                int bs=sc.nextInt();
+                mealcost=470+(10*au)+(50*bs);
+                break;
+                
+                default:
+                System.out.println("Please Enter valid choice."); 
+            }
+        }
+        tax=0.0657*mealcost;
+        totalcost=mealcost+tax;
+        tip=0.2*totalcost;
+        totalbill=totalcost+tip;
+        System.out.println("***********************");
+        System.out.println("Cost of meal:$"+mealcost);
+        System.out.println("Tax:$"+tax);
+        System.out.println("Tip:$"+tip);
+        System.out.println("Total Bill:$"+totalbill);
+        System.out.println("THANKYOU FOR KIND VISIT. HOPE YOU WILL COME BACK AGAIN");
+    }
+}
